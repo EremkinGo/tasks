@@ -1,0 +1,13 @@
+// Task - find the only single number
+package main
+
+import "fmt"
+
+func main() {
+	slice1 := []int{651564, 1, 2, 1, 2, 45, 8, 5, 45, 4, 5, 8, 4}
+	var result int
+	for _, j := range slice1 {
+		result ^= j
+	}
+	fmt.Println(result)
+}
