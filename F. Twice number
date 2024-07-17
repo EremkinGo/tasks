@@ -1,0 +1,23 @@
+// Task - print a single number that repeats twice
+package main
+
+import "fmt"
+
+func main() {
+
+	slice1 := []int{5, 1, 7, 33, 4, 2, 55, 458, 456456, 9, 89494, 65564, 3, 9, 984, 16, 3}
+	var a int
+	fmt.Println("First", slice1)
+
+	for i := 0; i <= len(slice1)-1; i++ {
+		a = slice1[i]
+		fmt.Println("a=", a)
+		for j := i + 1; j <= len(slice1)-1; j++ {
+			if a == slice1[j] {
+				fmt.Println(slice1[j])
+				i = len(slice1) - 1
+				break
+			}
+		}
+	}
+}
