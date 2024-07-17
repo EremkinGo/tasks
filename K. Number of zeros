@@ -1,0 +1,26 @@
+// Task: you've got a simple number. Needs to count the number of zeros in it's binary representation
+
+package main
+
+import (
+	"fmt"
+	"strconv"
+)
+
+func main() {
+	num1 := 2686565
+	example := 48
+	count := 0
+
+	num2 := strconv.FormatInt(int64(num1), 2)
+	fmt.Println(num2)
+
+	for _, j := range num2 {
+
+		if j == int32(example) {
+			count++
+		}
+	}
+	fmt.Println("Number of zeros =", count)
+
+}
